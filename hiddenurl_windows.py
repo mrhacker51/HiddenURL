@@ -5,7 +5,9 @@ import time
 import pyshorteners
 from time import sleep
 
-os.system('cls')
+
+def clear():
+    os.system('clear' if os.name == "nt" "cls" else "clear")
 
 def Main():
     print("\033[93m--------------------------------------------")
@@ -78,27 +80,27 @@ def Selector():
     elif select == 19:
         EnlacePersonalized()
     elif select == 99:
-        os.system('cls')
+        clear()
         print("Çıkış yapılıyor...")
         sleep(1)
-        os.system('cls')
+        clear()
         exit()
     else:
-        os.system('cls')
+        clear()
         print("Hatalı giriş...")
         sleep(1)
-        os.system('cls')
+        clear()
         Main()
 
 
 def EnlaceGoogle():
-    os.system('cls')
+    clear()
     print("Seçiminiz Google.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
     print("\nİnandırıcı bir uzantı yazmalısın, mesela: onemli-bir-gelisme")
     Postlink = str(input("\nLink uzantısı: "))
-    os.system('cls')
+    clear()
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
@@ -106,7 +108,7 @@ def EnlaceGoogle():
     Other()
 
 def EnlaceYoutube():
-    os.system('cls')
+    clear()
     print("Seçiminiz Youtube.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -116,13 +118,13 @@ def EnlaceYoutube():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.youtube.com-watch-{Postlink}@{Withouthttp}")
     
     Other()
 
 def EnlaceSpotify():
-    os.system('cls')
+    clear()
     print("Seçiminiz Spotify.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -132,13 +134,13 @@ def EnlaceSpotify():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.spotify.com-album-{Postlink}@{Withouthttp}")
     
     Other()
 
 def EnlaceInstagram():
-    os.system('cls')
+    clear()
     print("Seçiminiz Instagram.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -148,13 +150,13 @@ def EnlaceInstagram():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.instagram.com-photo-{Postlink}@{Withouthttp}")
     
     Other()
 
 def EnlaceFacebook():
-    os.system('cls')
+    clear()
     print("Seçiminiz Facebook.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -164,12 +166,12 @@ def EnlaceFacebook():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.facebook.com-profile-{Postlink}@{Withouthttp}")
     Other()
 
 def EnlaceSabah():
-    os.system('cls')
+    clear()
     print("Seçiminiz Sabah Gazetesi.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -179,12 +181,12 @@ def EnlaceSabah():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.sabah.com.tr-sondakika-{Postlink}@{Withouthttp}")
     Other()
 
 def EnlaceHurriyet():
-    os.system('cls')
+    clear()
     print("Seçiminiz Hürriyet Gazetesi.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -194,12 +196,12 @@ def EnlaceHurriyet():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.hurriyet.com.tr-gundem-{Postlink}@{Withouthttp}")
     Other()
 
 def EnlaceYeniSafak():
-    os.system('cls')
+    clear()
     print("Seçiminiz Yeni Şafak Gazetesi.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -209,13 +211,13 @@ def EnlaceYeniSafak():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.yenisafak.com.tr-sondakika-{Postlink}@{Withouthttp}")
     Other()
 
 
 def EnlaceMedium():
-    os.system('cls')
+    clear()
     print("Seçiminiz Medium.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -225,13 +227,13 @@ def EnlaceMedium():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.medium.com-turkiye-{Postlink}@{Withouthttp}")
     Other()
 
 
 def EnlaceHaberlerCom():
-    os.system('cls')
+    clear()
     print("Seçiminiz Haberler.Com.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -241,13 +243,13 @@ def EnlaceHaberlerCom():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.haberler.com-son-dakika-{Postlink}@{Withouthttp}")
     Other()
 
 
 def EnlaceCHP():
-    os.system('cls')
+    clear()
     print("Seçiminiz CHP (Cumhuriyet Halk Partisi).")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -257,12 +259,12 @@ def EnlaceCHP():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.chp.org.tr-haberler-{Postlink}@{Withouthttp}")
     Other()
 
 def EnlaceMHP():
-    os.system('cls')
+    clear()
     print("Seçiminiz MHP (Milliyetçi Hareket Partisi).")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -272,12 +274,12 @@ def EnlaceMHP():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.mhp.org.tr-htmldocs-mhp-4687-{Postlink}@{Withouthttp}")
     Other()
 
 def EnlaceAKP():
-    os.system('cls')
+    clear()
     print("Seçiminiz AKP (Adalet Ve Kalkınma Partisi).")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -287,12 +289,12 @@ def EnlaceAKP():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.akparti.org.tr-haberler-{Postlink}@{Withouthttp}")
     Other()
 
 def EnlaceBtcTurk():
-    os.system('cls')
+    clear()
     print("Seçiminiz BTC Türk.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -302,13 +304,13 @@ def EnlaceBtcTurk():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.btcturk.com-{Postlink}@{Withouthttp}")
     Other()
 
 
 def EnlaceUdemy():
-    os.system('cls')
+    clear()
     print("Seçiminiz Udemy.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -318,13 +320,13 @@ def EnlaceUdemy():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.udemy.com-course-{Postlink}@{Withouthttp}")
     Other()
 
 
 def EnlaceHepsiburada():
-    os.system('cls')
+    clear()
     print("Seçiminiz Hepsiburada.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -334,13 +336,13 @@ def EnlaceHepsiburada():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.hepsiburada.com-urun-detay-{Postlink}@{Withouthttp}")
     Other()
 
 
 def EnlaceNeOnbir():
-    os.system('cls')
+    clear()
     print("Seçiminiz n11.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -350,13 +352,13 @@ def EnlaceNeOnbir():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://urun.n11.com-firsatlar-{Postlink}@{Withouthttp}")
     Other()
 
 
 def EnlaceTrendyol():
-    os.system('cls')
+    clear()
     print("Seçiminiz Trendyol.")
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
     
@@ -366,13 +368,13 @@ def EnlaceTrendyol():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://trendyol.com-firsatlar-{Postlink}@{Withouthttp}")
     Other()
 
 
 def EnlacePersonalized():
-    os.system('cls')
+    clear()
     print("Seçiminiz Personalized.")
     Domain = str(input("ozelalanadim.com/es... input domain: "))
     OriginalLink = str(input("\nOrijinal URL(yönlendirmek istediğiniz asıl adres): "))
@@ -383,7 +385,7 @@ def EnlacePersonalized():
     Shortener = pyshorteners.Shortener()
     EndLink = Shortener.tinyurl.short(OriginalLink)
     Withouthttp = EndLink[7:]
-    os.system('cls')
+    clear()
     print(f"\033[95m\nSahte link hazır: https://www.{Domain}-{Postlink}@{Withouthttp}")
     
     Other()
@@ -393,10 +395,10 @@ def Other():
     print("Evet [*1] \nHayır [*2]")
     select=int(input("\nSeçim: "))
     if select == 1:
-        os.system('cls')
+        clear()
         Main()
     else:
-        os.system('cls')
+        clear()
         exit()
 
 Main()
